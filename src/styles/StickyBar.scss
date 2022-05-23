@@ -9,8 +9,26 @@
     list-style: none;
   }
 
-  .totals {
+  .view-cart {
     display: flex;
     gap: 20px;
+
+    .left {
+      position: relative;
+
+      svg {
+        height: 45px;
+        width: auto;
+      }
+
+      div {
+        color: orange;
+        font-weight: bold;
+
+        position: absolute;
+        left: 22px;
+        top: 7px;
+      }
+    }
   }
 }

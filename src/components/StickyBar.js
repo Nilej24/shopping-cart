@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
+import { FaShoppingCart } from 'react-icons/fa';
+
 function StickyBar({ cart }) {
   //state
   const [total, setTotal] = useState(0);
@@ -22,9 +24,17 @@ function StickyBar({ cart }) {
           <li>shop</li>
         </Link>
       </ul>
-      <div className="totals">
-        <div>items in cart: {cart.length}</div>
-        <div>total: {total}</div>
+      <div className="view-cart">
+        <div className="left">
+          <FaShoppingCart />
+          <div>
+            {cart.length}
+          </div>
+        </div>
+        <div className="right">
+          <h3>your cart</h3>
+          <div>total: {total}</div>
+        </div>
       </div>
     </header>
   );

@@ -10,13 +10,22 @@ function App() {
   // state
   const [cart, setCart] = useState([]);
 
+  // functions
+  const addToCart = (item, amount) => {
+    const newCart = [...cart];
+    for (let i = 0; i < amount; i++) {
+      newCart.push(item);
+    }
+    setCart(newCart);
+  };
+
   // render
   return (
     <BrowserRouter>
       <StickyBar cart={cart} />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/shop" element={<Shop />} />
+        <Route path="/shop" element={<Shop addToCart={addToCart} />} />
       </Routes>
     </BrowserRouter>
   );

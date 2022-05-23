@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 
 import Item from './Item';
 
-function Shop() {
+function Shop({ addToCart }) {
   // state
   const [shop, setShop] = useState([]);
 
@@ -30,9 +30,9 @@ function Shop() {
   // render
   return (
     <ul className="Shop">
-      {shop.map((item, index) => (
+      {shop.map((item) => (
         <li key={item.id}>
-          <Item dataItem={item} />
+          <Item dataItem={item} addToCart={addToCart} />
         </li>
       ))}
     </ul>
