@@ -1,0 +1,16 @@
+.StickyBar {
+  display: flex;
+  justify-content: space-between;
+
+  ul {
+    display: flex;
+    gap: 20px;
+
+    list-style: none;
+  }
+
+  .totals {
+    display: flex;
+    gap: 20px;
+  }
+}
